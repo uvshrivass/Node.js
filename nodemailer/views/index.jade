@@ -1,0 +1,52 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Thank you page
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+  body
+    .container
+      .jumbotron.text-xs-center
+        center
+          h2.display-3 Contact Form
+          p.lead Kindly fill the form to reach out to Ujjwal.
+      form#contact-form(method='POST', action='/user/contact')
+        .messages
+        .controls
+          .row
+            .col-md-6
+              .form-group
+                label(for='form_name') Firstname *
+                input#form_name.form-control(type='text', name='fname', placeholder='Please enter your firstname *', required='required', data-error='Firstname is required.')
+                .help-block.with-errors
+            .col-md-6
+              .form-group
+                label(for='form_lastname') Lastname *
+                input#form_lastname.form-control(type='text', name='lname', placeholder='Please enter your lastname *', required='required', data-error='Lastname is required.')
+                .help-block.with-errors
+          .row
+            .col-md-6
+              .form-group
+                label(for='form_email') Email *
+                input#form_email.form-control(type='email', name='email', placeholder='Please enter your email *', required='required', data-error='Valid email is required.')
+                .help-block.with-errors
+            .col-md-6
+              .form-group
+                label(for='form_subject') Please specify your subject *
+                input#form_subject.form-control(type='text', name='subject', placeholder='Please enter your subject *', required='required', data-error='Valid email is required.')
+                .help-block.with-errors
+          .row
+            .col-md-12
+              .form-group
+                label(for='form_message') Message *
+                textarea#form_message.form-control(name='message', placeholder='Message for me *', rows='4', required='required', data-error='Please, leave us a message.')
+                .help-block.with-errors
+            .col-md-12
+              input.btn.btn-success.btn-send(type='submit', value='Send message')
+              br
+              br

@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Explorer</title>
+
+<script>
+
+function alita(){
+    document.getElementById('title').innerHTML = "Alita: Battle Angel"
+    document.getElementById('intro').innerHTML = "An action-packed story of one young woman's journey to discover the truth of who she is and her fight to change the world."
+    document.getElementById('cast').innerHTML = "<strong>Director</strong>: Robert Rodriguez <br> <strong>Producers</strong>: James Cameron, Robert Rodriguez, Jon Landau <br> <strong>Star Cast</strong>: Rosa Salazar, Christoph Waltz, Jennifer Connelly "
+    document.getElementById('a').style.border = "thick solid red"
+    document.getElementById('b').style.border = ""
+    document.getElementById('c').style.border = ""
+}
+
+function marrypoppins(){
+    document.getElementById('title').innerHTML = "Mary Poppins Returns"
+    document.getElementById('intro').innerHTML = "Decades after her original visit, the magical nanny returns to help the Banks siblings and Michael's children through a difficult time in their lives."
+    document.getElementById('cast').innerHTML = "<strong>Director</strong>: Rob Marshall <br> <strong> Writers </strong>: David Magee, David Magee <br> <strong>Star Cast</strong>: Emily Blunt, Lin-Manuel Miranda, Ben Whishaw"
+    document.getElementById('b').style.border = "thick solid red"
+    document.getElementById('a').style.border = ""
+    document.getElementById('c').style.border = ""
+}
+
+function lego(){
+    document.getElementById('title').innerHTML = "The Lego Movie 2: The Second Part"
+    document.getElementById('intro').innerHTML = "It's been five years since everything was awesome and the citizens are facing a huge new threat: Lego Duplo invaders from outer space, wrecking everything faster than they can rebuild."
+    document.getElementById('cast').innerHTML = "<strong>Director</strong>: Mike Mitchell<br><strong>Writers</strong>: Phil Lord, Christopher<br> <strong>Star Cast</strong>: Chris Pratt, Elizabeth Banks, Will Arnett "
+    document.getElementById('c').style.border = "thick solid red"
+    document.getElementById('a').style.border = ""
+    document.getElementById('b').style.border = ""
+}
+
+function clearr(){
+    document.getElementById('title').innerHTML = ""
+    document.getElementById('intro').innerHTML = ""
+    document.getElementById('cast').innerHTML = ""
+    document.getElementById('c').style.border = ""
+    document.getElementById('a').style.border = ""
+    document.getElementById('b').style.border = ""
+}
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+    <div >
+        
+        <center >
+                <h1>Click on a movie to see the details!</h1><br><br>
+                <img src="alita.jpeg" style="width: 10%;" onclick="alita()" id="a">
+                <img src="marypoppins.jpg" style="width: 10%;" onclick="marrypoppins()" id="b">
+                <img src="lego2.jpeg" style="width: 10%;" onclick="lego()" id="c">
+                <br><br>
+                <h2 id="title"></h2>
+                <p id="intro"></p>
+                <p id="cast"></p>
+        </center>
+               
+    </div>
+    
+</body>
+</html>
